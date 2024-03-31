@@ -6,7 +6,7 @@ import React from 'react'
 const Userseperator = () => {
 
     return (
-        <div className='w-full bg-secondary h-20 rounded-lg flex flex-col items-center justify-center'>
+        <div className='max-w-80 bg-secondary h-20 rounded-lg flex flex-col items-center justify-center'>
             <div className='flex items-center gap-3'>
 
                 <div className="relative">

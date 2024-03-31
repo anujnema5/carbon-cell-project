@@ -14,14 +14,14 @@ type Props = {
 
 const Mobilenav: React.FC<Props> = ({ imgUrl, navLinks, supportLinks }) => {
   const { menu } = useConfig();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="sm:hidden px-5 pt-10 pb-6 flex flex-col gap-10">
+    <div className={`sm:hidden px-5 pt-10 pb-6 flex flex-col gap-10 ${menu ? "bg-primary": ""}`}>
+      
       <Navheader logo={imgUrl} />
       
       {menu && (
-        <div className={`flex flex-col gap-10 ${isMenuOpen ? 'open' : 'closed'}`}>
+        <div className={`flex flex-col gap-10`}>
           <div className="flex flex-col gap-10">
             {menu && <Search />}
             <Links links={navLinks} />
